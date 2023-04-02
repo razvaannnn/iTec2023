@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background: #D3D0CB;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1E2019;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #E2C044;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #D3D0CB;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #1E2019;
+  background: #D3D0CB;
+}
+
+#text {
+    position: relative;
+    text-align: justify;
+    justify-content: center;
+    margin-bottom: 250px;
+    color: #E2C044;
+    font-size: 9em;
+    font-size: clamp(30px,8vw,100px);
+}
+
+#hero {
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#tab {
+  position: relative;
+}
+
+.tabs {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: #1E2019;
+}
+
+element.style {
+    background: #1E2019;
+}
+
+.tabs label {
+  order: 1;
+  display: block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: #D3D0CB;
+  background: #1E2019;
+  font-size: clamp(30px, 1vw, 10px);
+  font-weight: bold;
+}
+
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding-top: 50px;
+  padding-left: 380px;
+  padding-right: 380px;
+  background: #D3D0CB;
+}
+
+.tabs input[type=radio] {
+  display: none;
+}
+
+.tabs input[type=radio]:checked+label {
+  background: #D3D0CB;
+  color: #1E2019;
+}
+
+.tabs input[type=radio]:checked+label+.tab {
+  display: block;
+}
+
+.tab p {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+.tab h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+  color: #111;
+}
+
+.tabs .text{
+    font-size: 30px;
+    font-weight: 300;
+    color: #D3D0CB;
+}
+
+
+#app {
+  width: 100%;
+  height: 100vh;
+  background: #D3D0CB;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#chat_container {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+  background: #353535;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top-right-radius: 3%;
+  border-top-left-radius: 3%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #121717;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+
+  background: #5436DA;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37f;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+
+  color: #dcdcdc;
+  font-size: 20px;
+
+  max-width: 100%;
+  overflow-x: scroll;
+
+  /*
+   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
+   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
+   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
+   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
+  */
+  white-space: pre-wrap;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background: #393E41;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+
+  color: #fff;
+  font-size: 18px;
+
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
